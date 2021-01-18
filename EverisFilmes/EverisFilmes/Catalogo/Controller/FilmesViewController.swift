@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class ViewController: UITableViewController, RespostaAPI {
+class FilmesViewController: UITableViewController, RespostaAPI {
     func success(Modelo: ModeloFilme) {
         listaDeFilmes = Modelo
         tableView.reloadData()
@@ -35,6 +35,7 @@ class ViewController: UITableViewController, RespostaAPI {
         super.viewDidLoad()
         api.configura(delegate: self)
         api.recuperaFilmes(pagina: paginaAtual)
+        
     }
     
     

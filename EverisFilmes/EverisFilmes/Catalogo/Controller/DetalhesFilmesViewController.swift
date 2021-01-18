@@ -25,7 +25,9 @@ class DetalhesFilmesViewController: UIViewController {
    
     //MARK: - life Cycle
 
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
+        
+    
         
         avaliacaoView.layer.borderWidth=1.0
         avaliacaoView.layer.masksToBounds = false

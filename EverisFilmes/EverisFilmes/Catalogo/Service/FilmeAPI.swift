@@ -33,7 +33,7 @@ class FilmeAPI: NSObject, filmesProtocolo {
     func recuperaFilmes(pagina:Int)  {
         
         
-        guard let url = URL(string: "https://api.themoviedb.org/3/trending/all/week?api_key=5287ae8d76c11e98a09d2b4dfe0f443e&language=pt-BR&page=\(pagina)") else {return}
+        guard let url = URL(string:"https://api.themoviedb.org/3/trending/all/week?api_key=5287ae8d76c11e98a09d2b4dfe0f443e&language=pt-BR&page=\(pagina)") else {return}
         Alamofire.request(url , method: .get).responseJSON { (response) in
 
             switch response.result{

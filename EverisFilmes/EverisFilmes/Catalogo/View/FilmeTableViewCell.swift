@@ -9,7 +9,7 @@
 import UIKit
 
 
-class TableViewCell: UITableViewCell{
+class FilmeTableViewCell: UITableViewCell{
     
 
     @IBOutlet weak var labelTitulo: UILabel!
