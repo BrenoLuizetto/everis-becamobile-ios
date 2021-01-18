@@ -10,8 +10,8 @@ import UIKit
 import AlamofireImage
 
 class FilmesViewController: UITableViewController, RespostaAPI {
-    func success(Modelo: ModeloFilme) {
-        listaDeFilmes = Modelo
+    func success(modelo: ModeloFilme) {
+        listaDeFilmes = modelo
         tableView.reloadData()
     }
     
@@ -39,10 +39,6 @@ class FilmesViewController: UITableViewController, RespostaAPI {
     }
     
     
-    
-    
-    
-    
     //MARK: - Métodos
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,30 +46,18 @@ class FilmesViewController: UITableViewController, RespostaAPI {
         
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celula = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-        let filme = listaDeFilmes?.results[indexPath.row]
-        
-        let titulo: String
-        if filme?.mediaType == "movie" {
-            titulo = filme?.originalTitle ?? ""
-        }else{
-            titulo = self.listaDeFilmes?.results[indexPath.row].originalName ?? ""
-        }
-
-        let caminhoDaImagem: String
-        caminhoDaImagem = filme?.posterPath ?? ""
-
-         let imageUrl = URL(string: "https://image.tmdb.org/t/p/original\(caminhoDaImagem)")
-
-        if let url = imageUrl {
-            celula.imagemFilme?.af_setImage(withURL: url)
-        }
-    
-        celula.labelTitulo.text = titulo
-        
-        
-        
-        return celula
+        let celula = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FilmeTableViewCell
+           guard let filme = listaDeFilmes?.results[indexPath.row] else {return celula}
+       
+           let titulo = configuraTitulo(filme.originalTitle, filme.originalName, filme.mediaType)
+           celula.labelTitulo.text = titulo
+       
+           guard let poster = filme.posterPath else {return celula }
+           if let url = URL(string: configuraPoster(poster)) {
+               celula.imagemFilme?.af_setImage(withURL: url)
+           }
+           
+           return celula
     }
     
 
@@ -92,7 +76,24 @@ class FilmesViewController: UITableViewController, RespostaAPI {
         self.navigationController?.pushViewController(controller,animated: true)
     }
     
+    func configuraTitulo(_ tituloOriginal: String?, _ nomeOriginal: String?, _ tipoFilme: String?) -> String{
+        let titulo: String
+        if tipoFilme == "movie" {
+            titulo = tituloOriginal ?? ""
+            return titulo
+        }else{
+            titulo = nomeOriginal ?? ""
+            return titulo
+        }
+    }
+    func configuraPoster(_ caminhoDaImagem: String) -> String{
+        let imagemUrl = String("https://image.tmdb.org/t/p/original\(caminhoDaImagem)")
+            return imagemUrl
+    }
+    
    
+    //MARK: - IBOutlet
+    
     @IBAction func buttonVerMais(_ sender: UIButton) {
         paginaAtual = paginaAtual + 1
         viewDidLoad()

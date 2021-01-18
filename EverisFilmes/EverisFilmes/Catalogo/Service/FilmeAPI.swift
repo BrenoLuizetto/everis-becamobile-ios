@@ -14,7 +14,7 @@ protocol filmesProtocolo: class {
 }
 
 protocol RespostaAPI {
-    func success(Modelo: ModeloFilme)
+    func success(modelo: ModeloFilme)
     func failure()
 }
 
@@ -44,7 +44,7 @@ class FilmeAPI: NSObject, filmesProtocolo {
                     do {
                         guard let data = response.data else {return}
                         let objetoFilme = try JSONDecoder().decode(ModeloFilme.self, from: data)
-                        self.delegate?.success(Modelo: objetoFilme)
+                        self.delegate?.success(modelo: objetoFilme)
                         
                 
                     } catch {

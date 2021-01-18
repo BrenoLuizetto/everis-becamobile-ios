@@ -43,22 +43,16 @@ class DetalhesFilmesViewController: UIViewController {
 
     func configuraFilme(){
         if let filme = listaDeFilmes {
-            if filme.mediaType == "movie" {
-                if let tituloFilme = filme.originalTitle{
-                    self.labelTitulo.text = tituloFilme
-                }
-            }else{
-                if let tituloFilme = filme.originalName{
-                    self.labelTitulo.text = tituloFilme
-                }
-            }
+            
+            
+            labelTitulo.text = FilmesViewController().configuraTitulo(filme.originalTitle, filme.originalName, filme.mediaType)
             
             if let descricaoFilme = filme.overview{
                 self.labelDescricao.text = descricaoFilme
             }
             
             let caminhoDaImagem: String
-            caminhoDaImagem = filme.backdropPath 
+            caminhoDaImagem = filme.backdropPath
             
             let imageUrl = URL(string: "https://image.tmdb.org/t/p/original\(caminhoDaImagem)")
             
@@ -66,29 +60,34 @@ class DetalhesFilmesViewController: UIViewController {
                 imagemDetalhes.af_setImage(withURL: url)
             }
             
-            var ratingFilme = filme.voteAverage
-            ratingFilme = ratingFilme * 10
-            let avaliacao = String(format: "%.0f%%" ,ratingFilme)
-            self.labelRating.text = avaliacao
+            var avaliacao = filme.voteAverage
+            avaliacao *= 10
+            estrelasFilme(avaliacao: avaliacao)
             
-            
-            if ratingFilme >= 80 {
-                self.labelEstrela.text = "⭐⭐⭐⭐⭐"
-            }
-            else if ratingFilme >= 65 && ratingFilme < 80{
-                self.labelEstrela.text = "⭐⭐⭐⭐"
-            }
-            else if ratingFilme >= 50 && ratingFilme < 65{
-                self.labelEstrela.text = "⭐⭐⭐"
-            }
-            else if ratingFilme >= 35 && ratingFilme < 50{
-                self.labelEstrela.text = "⭐⭐"
-            }
-            else {
-                self.labelEstrela.text = "⭐"
-            }
+            let classificaoFilme = String(format: "%.0f%%" ,avaliacao)
+            self.labelRating.text = classificaoFilme
+           
         }
 
+    }
+    
+    
+    func estrelasFilme(avaliacao: Double){
+        if avaliacao >= 80 {
+            self.labelEstrela.text = "⭐⭐⭐⭐⭐"
+        }
+        else if avaliacao >= 65 && avaliacao < 80{
+            self.labelEstrela.text = "⭐⭐⭐⭐"
+        }
+        else if avaliacao >= 50 && avaliacao < 65{
+            self.labelEstrela.text = "⭐⭐⭐"
+        }
+        else if avaliacao >= 35 && avaliacao < 50{
+            self.labelEstrela.text = "⭐⭐"
+        }
+        else {
+            self.labelEstrela.text = "⭐"
+        }
     }
 
 }

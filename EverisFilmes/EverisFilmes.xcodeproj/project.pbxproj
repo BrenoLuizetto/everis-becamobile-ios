@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4F9213168CCF6A73F21D9ACA /* Pods_EverisFilmes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683AFA2758CA795C144D2362 /* Pods_EverisFilmes.framework */; };
-		F11905C025A8DDBA0089C7A3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11905BF25A8DDBA0089C7A3 /* TableViewCell.swift */; };
+		F11905C025A8DDBA0089C7A3 /* FilmeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11905BF25A8DDBA0089C7A3 /* FilmeTableViewCell.swift */; };
 		F16A906625AB6A6000C2B214 /* DetalhesFilmesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A906525AB6A6000C2B214 /* DetalhesFilmesViewController.swift */; };
 		F1AB8C8125A73BA000E52D9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB8C8025A73BA000E52D9F /* AppDelegate.swift */; };
-		F1AB8C8325A73BA000E52D9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB8C8225A73BA000E52D9F /* ViewController.swift */; };
+		F1AB8C8325A73BA000E52D9F /* FilmesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB8C8225A73BA000E52D9F /* FilmesViewController.swift */; };
 		F1AB8C8625A73BA000E52D9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1AB8C8425A73BA000E52D9F /* Main.storyboard */; };
 		F1AB8C8925A73BA000E52D9F /* EverisFilmes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1AB8C8725A73BA000E52D9F /* EverisFilmes.xcdatamodeld */; };
 		F1AB8C8B25A73BA300E52D9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1AB8C8A25A73BA300E52D9F /* Assets.xcassets */; };
@@ -24,11 +24,11 @@
 		683AFA2758CA795C144D2362 /* Pods_EverisFilmes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EverisFilmes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AE1F809CD40251AE0510305 /* Pods-EverisFilmes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverisFilmes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EverisFilmes/Pods-EverisFilmes.debug.xcconfig"; sourceTree = "<group>"; };
 		8730AECA6DFA8C2250584FD4 /* Pods-EverisFilmes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverisFilmes.release.xcconfig"; path = "Pods/Target Support Files/Pods-EverisFilmes/Pods-EverisFilmes.release.xcconfig"; sourceTree = "<group>"; };
-		F11905BF25A8DDBA0089C7A3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		F11905BF25A8DDBA0089C7A3 /* FilmeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeTableViewCell.swift; sourceTree = "<group>"; };
 		F16A906525AB6A6000C2B214 /* DetalhesFilmesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesFilmesViewController.swift; sourceTree = "<group>"; };
 		F1AB8C7D25A73BA000E52D9F /* EverisFilmes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EverisFilmes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1AB8C8025A73BA000E52D9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1AB8C8225A73BA000E52D9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F1AB8C8225A73BA000E52D9F /* FilmesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmesViewController.swift; sourceTree = "<group>"; };
 		F1AB8C8525A73BA000E52D9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1AB8C8825A73BA000E52D9F /* EverisFilmes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EverisFilmes.xcdatamodel; sourceTree = "<group>"; };
 		F1AB8C8A25A73BA300E52D9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,27 +70,12 @@
 		F16A905E25AB68FA00C2B214 /* Catalogo */ = {
 			isa = PBXGroup;
 			children = (
+				F1E72C0725AE4CFE003CBAB5 /* Service */,
 				F1AB8C9525A73BC400E52D9F /* Model */,
 				F1AB8C9625A73BC900E52D9F /* View */,
 				F1AB8C9725A73BCE00E52D9F /* Controller */,
 			);
 			path = Catalogo;
-			sourceTree = "<group>";
-		};
-		F16A905F25AB69C100C2B214 /* Detalhes */ = {
-			isa = PBXGroup;
-			children = (
-				F16A906125AB69DB00C2B214 /* Controller */,
-			);
-			path = Detalhes;
-			sourceTree = "<group>";
-		};
-		F16A906125AB69DB00C2B214 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F16A906525AB6A6000C2B214 /* DetalhesFilmesViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		F1AB8C7425A73BA000E52D9F = {
@@ -115,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				F16A905E25AB68FA00C2B214 /* Catalogo */,
-				F16A905F25AB69C100C2B214 /* Detalhes */,
 				F1AB8C8025A73BA000E52D9F /* AppDelegate.swift */,
 				F1AB8C8425A73BA000E52D9F /* Main.storyboard */,
 				F1AB8C8A25A73BA300E52D9F /* Assets.xcassets */,
@@ -130,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				F1C4970C25A76BE400F7DAD8 /* Filme.swift */,
-				F1AB8C9A25A744E500E52D9F /* FilmeAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,7 +121,7 @@
 		F1AB8C9625A73BC900E52D9F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F11905BF25A8DDBA0089C7A3 /* TableViewCell.swift */,
+				F11905BF25A8DDBA0089C7A3 /* FilmeTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -146,9 +129,18 @@
 		F1AB8C9725A73BCE00E52D9F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F1AB8C8225A73BA000E52D9F /* ViewController.swift */,
+				F1AB8C8225A73BA000E52D9F /* FilmesViewController.swift */,
+				F16A906525AB6A6000C2B214 /* DetalhesFilmesViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1E72C0725AE4CFE003CBAB5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F1AB8C9A25A744E500E52D9F /* FilmeAPI.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +172,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = Alura;
 				TargetAttributes = {
 					F1AB8C7C25A73BA000E52D9F = {
@@ -265,12 +257,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1AB8C8325A73BA000E52D9F /* ViewController.swift in Sources */,
+				F1AB8C8325A73BA000E52D9F /* FilmesViewController.swift in Sources */,
 				F1C4970D25A76BE400F7DAD8 /* Filme.swift in Sources */,
 				F16A906625AB6A6000C2B214 /* DetalhesFilmesViewController.swift in Sources */,
 				F1AB8C8125A73BA000E52D9F /* AppDelegate.swift in Sources */,
 				F1AB8C9B25A744E500E52D9F /* FilmeAPI.swift in Sources */,
-				F11905C025A8DDBA0089C7A3 /* TableViewCell.swift in Sources */,
+				F11905C025A8DDBA0089C7A3 /* FilmeTableViewCell.swift in Sources */,
 				F1AB8C8925A73BA000E52D9F /* EverisFilmes.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +315,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -384,6 +377,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -428,6 +422,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -446,6 +441,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
