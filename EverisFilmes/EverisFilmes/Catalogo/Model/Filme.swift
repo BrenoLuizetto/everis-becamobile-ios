@@ -13,7 +13,6 @@ struct ModeloFilme: Codable {
     }
 }
 
-
 // MARK: - Result
 struct Result: Codable {
     let adult: Bool?
@@ -54,15 +53,13 @@ struct Result: Codable {
     }
 }
 
-//enum MediaType: String, Codable {
+// enum MediaType: String, Codable {
 //    case movie = "movie"
 //    case tv = "tv"
-//}
+// }
 
-//enum OriginalLanguage: String, Codable {
+// enum OriginalLanguage: String, Codable {
 //    case en = "en"
 //    case fr = "fr"
 //    case ja = "ja"
-//}
-
-
+// }

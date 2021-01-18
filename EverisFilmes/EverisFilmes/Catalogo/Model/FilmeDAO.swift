@@ -9,12 +9,8 @@
 import UIKit
 
 class FilmeDAO: NSObject {
-    
 
-   
-    func salvaFilme(dicionarioDeFilmes: Dictionary<String, Any>){
-    
-        
-        
+    func salvaFilme(dicionarioDeFilmes: [String: Any]) {
+
     }
 }

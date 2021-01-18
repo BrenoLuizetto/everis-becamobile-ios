@@ -10,23 +10,18 @@ import Foundation
 import UIKit
 
 class DetalhesViewController: UIViewController {
-    
-    //MARK: - Outlets
-    
+
+    // MARK: - Outlets
+
     @IBOutlet weak var filmeImageView: UIImageView!
     @IBOutlet weak var tituloLabel: UILabel!
     @IBOutlet weak var descricaoLabel: UILabel!
-    
+
     var filme: ModeloFilme!
 
-
     override func viewDidLoad() {
-        
-       
-        
+
         super.viewDidLoad()
     }
-    
-    
-    
+
 }

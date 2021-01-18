@@ -9,22 +9,21 @@
 import Foundation
 
 class Paginacao: NSObject {
-    
+
     var pagina: Int
-    
+
      init(pagina: Int) {
         self.pagina = pagina
     }
-    
-    
-    func capturaPagina() -> Int{
-        
+
+    func capturaPagina() -> Int {
+
         var paginaAuxiliar = pagina
-        
+
         var paginaSelecionada = paginaAuxiliar
-        
+
         paginaAuxiliar = paginaSelecionada + 1
-        
+
         return paginaSelecionada
     }
 }

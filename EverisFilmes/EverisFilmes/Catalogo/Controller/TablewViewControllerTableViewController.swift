@@ -11,11 +11,10 @@ import UIKit
 class TablewViewControllerTableViewController: UITableViewController {
 
 //    let listaDeFilmes: Array<Filmes> = 
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
     }
 
     // MARK: - Table view data source
@@ -27,7 +26,5 @@ class TablewViewControllerTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
-
-    
 
 }

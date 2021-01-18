@@ -8,17 +8,14 @@
 
 import UIKit
 
-
-class FilmeTableViewCell: UITableViewCell{
-    
+class FilmeTableViewCell: UITableViewCell {
 
     @IBOutlet weak var labelTitulo: UILabel!
-    
+
     @IBOutlet weak var imagemFilme: UIImageView!
-    
-    
-    func viewDidload(){
-        imagemFilme.layer.cornerRadius = 5;
-        imagemFilme.layer.masksToBounds = true;
+
+    func viewDidload() {
+        imagemFilme.layer.cornerRadius = 5
+        imagemFilme.layer.masksToBounds = true
     }
 }
