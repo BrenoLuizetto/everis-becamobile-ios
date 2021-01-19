@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A69063F02CEE39FF252718F3 /* Pods_EverisFilmes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FD8CE5269CBF9598EEDA65 /* Pods_EverisFilmes.framework */; };
+		F10784C625B71D0F00974B52 /* Accessibility+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10784C525B71D0F00974B52 /* Accessibility+.swift */; };
 		F11905C025A8DDBA0089C7A3 /* FilmeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11905BF25A8DDBA0089C7A3 /* FilmeTableViewCell.swift */; };
 		F128DDDD25B60E7000D338B6 /* EverisFilmesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128DDDC25B60E7000D338B6 /* EverisFilmesTests.swift */; };
 		F16A906625AB6A6000C2B214 /* DetalhesFilmesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A906525AB6A6000C2B214 /* DetalhesFilmesViewController.swift */; };
@@ -35,6 +36,7 @@
 		22FD8CE5269CBF9598EEDA65 /* Pods_EverisFilmes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EverisFilmes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4DC9B6472977C3B6124651 /* Pods-EverisFilmes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverisFilmes.release.xcconfig"; path = "Target Support Files/Pods-EverisFilmes/Pods-EverisFilmes.release.xcconfig"; sourceTree = "<group>"; };
 		78F36D9B41D9E40D3EB1B7AB /* Pods-EverisFilmes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EverisFilmes.debug.xcconfig"; path = "Target Support Files/Pods-EverisFilmes/Pods-EverisFilmes.debug.xcconfig"; sourceTree = "<group>"; };
+		F10784C525B71D0F00974B52 /* Accessibility+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Accessibility+.swift"; sourceTree = "<group>"; };
 		F11905BF25A8DDBA0089C7A3 /* FilmeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmeTableViewCell.swift; sourceTree = "<group>"; };
 		F128DDDA25B60E7000D338B6 /* EverisFilmesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EverisFilmesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F128DDDC25B60E7000D338B6 /* EverisFilmesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverisFilmesTests.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				F11905BF25A8DDBA0089C7A3 /* FilmeTableViewCell.swift */,
+				F10784C525B71D0F00974B52 /* Accessibility+.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			files = (
 				F1AB8C8325A73BA000E52D9F /* FilmesViewController.swift in Sources */,
 				F1C4970D25A76BE400F7DAD8 /* Filme.swift in Sources */,
+				F10784C625B71D0F00974B52 /* Accessibility+.swift in Sources */,
 				F16A906625AB6A6000C2B214 /* DetalhesFilmesViewController.swift in Sources */,
 				F1AB8C8125A73BA000E52D9F /* AppDelegate.swift in Sources */,
 				F1AB8C9B25A744E500E52D9F /* FilmeAPI.swift in Sources */,

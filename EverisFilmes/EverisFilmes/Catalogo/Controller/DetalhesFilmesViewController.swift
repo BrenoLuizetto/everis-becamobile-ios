@@ -35,7 +35,6 @@ class DetalhesFilmesViewController: UIViewController {
         configuraFilme()
 
     }
-
     // MARK: - Métodos
 
     func configuraFilme() {
@@ -59,6 +58,8 @@ class DetalhesFilmesViewController: UIViewController {
             var avaliacao = filme.voteAverage
             avaliacao *= 10
             estrelasFilme(avaliacao: avaliacao)
+            avaliacaoAccessibility(avaliacao)
+            porcentagemAcessibility(avaliacao)
 
             let classificaoFilme = String(format: "%.0f%%", avaliacao)
             self.labelRating.text = classificaoFilme

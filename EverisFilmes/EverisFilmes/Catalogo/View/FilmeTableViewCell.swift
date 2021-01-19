@@ -18,4 +18,8 @@ class FilmeTableViewCell: UITableViewCell {
         imagemFilme.layer.cornerRadius = 5
         imagemFilme.layer.masksToBounds = true
     }
+    
+ 
+    
+    
 }
