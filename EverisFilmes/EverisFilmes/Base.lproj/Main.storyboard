@@ -161,26 +161,19 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="W58-vr-I3U">
                                                 <rect key="frame" x="0.0" y="107.5" width="382" height="55"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZD-FA-icP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="55"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEA-xJ-jcd">
-                                                                <rect key="frame" x="3" y="15" width="44.5" height="25"/>
-                                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
-                                                                <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" red="0.033566087479999999" green="0.1081467643" blue="0.1354039907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEA-xJ-jcd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                                        <color key="backgroundColor" red="0.17433375634517767" green="0.17433375634517767" blue="0.17433375634517767" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="50" id="0Nn-MR-52v"/>
-                                                            <constraint firstItem="GEA-xJ-jcd" firstAttribute="centerY" secondItem="xZD-FA-icP" secondAttribute="centerY" id="1iQ-8Z-U7U"/>
-                                                            <constraint firstItem="GEA-xJ-jcd" firstAttribute="centerX" secondItem="xZD-FA-icP" secondAttribute="centerX" id="EMz-ky-3EY"/>
-                                                            <constraint firstAttribute="height" constant="55" id="k3b-En-McZ"/>
+                                                            <constraint firstAttribute="height" constant="55" id="6Jh-ii-3N5"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" priority="251" constant="55" id="sIk-aa-lzI"/>
                                                         </constraints>
-                                                    </view>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                                        <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="estrelas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPo-EN-DpG">
-                                                        <rect key="frame" x="52" y="0.0" width="330" height="55"/>
+                                                        <rect key="frame" x="57" y="0.0" width="325" height="55"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -225,7 +218,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="avaliacaoView" destination="xZD-FA-icP" id="yYA-hD-QUj"/>
+                        <outlet property="constraintLargura" destination="sIk-aa-lzI" id="8rr-hC-QDX"/>
                         <outlet property="imagemDetalhes" destination="ayb-UX-Bqm" id="z15-Hc-Ees"/>
                         <outlet property="labelDescricao" destination="yXb-uL-CbA" id="cR7-Qk-Pj8"/>
                         <outlet property="labelEstrela" destination="cPo-EN-DpG" id="w6M-0v-cK0"/>

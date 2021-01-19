@@ -41,6 +41,8 @@ extension DetalhesFilmesViewController {
         tituloAvaliacao.adjustsFontForContentSizeCategory = true
         tituloSinopse.font = .preferredFont(forTextStyle: .body)
         tituloSinopse.adjustsFontForContentSizeCategory = true
+        labelRating.font = .preferredFont(forTextStyle: .body)
+        labelRating.adjustsFontForContentSizeCategory = true
     }
 
 }

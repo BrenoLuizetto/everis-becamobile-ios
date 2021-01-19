@@ -20,7 +20,7 @@ class DetalhesFilmesViewController: UIViewController {
     @IBOutlet weak var scrollPrincipal: UIScrollView!
     @IBOutlet weak var tituloAvaliacao: UILabel!
     @IBOutlet weak var tituloSinopse: UILabel!
-    
+    @IBOutlet weak var constraintLargura: NSLayoutConstraint!
     // MARK: - Variaveis
 
     var listaDeFilmes: Result?
@@ -29,16 +29,21 @@ class DetalhesFilmesViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
 
-        avaliacaoView.layer.borderWidth=1.0
-        avaliacaoView.layer.masksToBounds = false
-        avaliacaoView.layer.cornerRadius = avaliacaoView.frame.size.height/2
-        avaliacaoView.clipsToBounds = true
+        labelRating.layer.borderWidth=1.0
+        labelRating.layer.masksToBounds = false
+        labelRating.layer.cornerRadius = labelRating.frame.size.height/2
+        labelRating.clipsToBounds = true
 
         configuraFilme()
         configuraLabel()
 
     }
     // MARK: - Métodos
+//    func setupController() {
+//        constraintLargura.constant = 100
+//        labelRating.sizeToFit()
+//        var frameLabel = labelRating.frame.width
+//    }
 
     func configuraFilme() {
         if let filme = listaDeFilmes {
