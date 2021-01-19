@@ -18,7 +18,9 @@ class DetalhesFilmesViewController: UIViewController {
     @IBOutlet weak var labelRating: UILabel!
     @IBOutlet weak var labelEstrela: UILabel!
     @IBOutlet weak var scrollPrincipal: UIScrollView!
-
+    @IBOutlet weak var tituloAvaliacao: UILabel!
+    @IBOutlet weak var tituloSinopse: UILabel!
+    
     // MARK: - Variaveis
 
     var listaDeFilmes: Result?
@@ -33,6 +35,7 @@ class DetalhesFilmesViewController: UIViewController {
         avaliacaoView.clipsToBounds = true
 
         configuraFilme()
+        configuraLabel()
 
     }
     // MARK: - Métodos

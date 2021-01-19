@@ -25,10 +25,22 @@ extension DetalhesFilmesViewController {
             labelEstrela.accessibilityValue = "uma estrela"
         }
     }
-    func porcentagemAcessibility(_ indice: Double){
+    func porcentagemAcessibility(_ indice: Double) {
         labelRating.isAccessibilityElement = true
         labelRating.accessibilityLabel = "Indice de aprovação"
         labelRating.accessibilityValue = "\(indice) %"
+    }
+    func configuraLabel() {
+        labelTitulo.font = .preferredFont(forTextStyle: .body)
+        labelTitulo.adjustsFontForContentSizeCategory = true
+        labelEstrela.font = .preferredFont(forTextStyle: .body)
+        labelEstrela.adjustsFontForContentSizeCategory = true
+        labelDescricao.font = .preferredFont(forTextStyle: .body)
+        labelDescricao.adjustsFontForContentSizeCategory = true
+        tituloAvaliacao.font = .preferredFont(forTextStyle: .body)
+        tituloAvaliacao.adjustsFontForContentSizeCategory = true
+        tituloSinopse.font = .preferredFont(forTextStyle: .body)
+        tituloSinopse.adjustsFontForContentSizeCategory = true
     }
 
 }

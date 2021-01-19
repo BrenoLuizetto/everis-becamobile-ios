@@ -152,7 +152,7 @@
                                                 <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avaliação dos usuários:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zr-rJ-DuE">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avaliação dos usuários:" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zr-rJ-DuE">
                                                 <rect key="frame" x="0.0" y="80" width="382" height="27.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                                 <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -231,6 +231,8 @@
                         <outlet property="labelEstrela" destination="cPo-EN-DpG" id="w6M-0v-cK0"/>
                         <outlet property="labelRating" destination="GEA-xJ-jcd" id="JzV-Zw-079"/>
                         <outlet property="labelTitulo" destination="ciU-Qw-oRM" id="CNY-qF-7zh"/>
+                        <outlet property="tituloAvaliacao" destination="0zr-rJ-DuE" id="5MT-dP-RTK"/>
+                        <outlet property="tituloSinopse" destination="mWl-pi-6Zz" id="Kcs-Pd-zMU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZT-QM-9Gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
